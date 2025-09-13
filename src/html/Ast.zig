@@ -599,7 +599,7 @@ pub fn init(
                                         .kind = kind,
                                         .model = model,
                                     };
-                                } else if (std.mem.indexOfScalar(u8, name, '-') == null) {
+                                } else if (strict and std.mem.indexOfScalar(u8, name, '-') == null) {
                                     try errors.append(gpa, .{
                                         .tag = .invalid_html_tag_name,
                                         .main_location = tag.name,
