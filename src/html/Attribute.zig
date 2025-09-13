@@ -2564,6 +2564,10 @@ pub const common = struct {
                     .label = "terms-of-service",
                     .desc = "Link to the agreement, or terms of service, between the document's provider and users who wish to use the document.",
                 },
+                .{
+                    .label = "external",
+                    .desc = "Indicates that the referenced document is not part of the same site as the current document.",
+                },
             }),
         },
         .desc = "The relationship of the linked URL as space-separated link types.",
