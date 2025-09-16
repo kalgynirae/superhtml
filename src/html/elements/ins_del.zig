@@ -31,8 +31,11 @@ pub const ins: Element = .{
 pub const del: Element = .{
     .tag = .del,
     .model = .{
-        .categories = .none,
-        .content = .{ .flow = true },
+        .categories = .{
+            .flow = true,
+            .phrasing = true,
+        },
+        .content = .transparent,
     },
     .meta = .{ .categories_superset = .none },
     .attributes = .static,
